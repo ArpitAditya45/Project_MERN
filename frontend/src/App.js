@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import {Create_Project} from './Pages/Create_Project';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -7,10 +6,10 @@ import User_Sign_Up from './Pages/User_Sign_Up';
 import Nav from './Pages/Nav';
 import { HashRouter, Routes, Route } from "react-router-dom";
 import { List_Project } from './Pages/List_Project';
+import { Navbar } from 'react-bootstrap';
 
 function App() {
   return (
-   
     <>
     <HashRouter>
     <Routes>

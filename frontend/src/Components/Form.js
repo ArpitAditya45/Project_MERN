@@ -42,20 +42,30 @@ function Form() {
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <div class="form-group">
-          <label>Project Name</label>
-          <input
-            type="text"
-            className="form-control"
-            id="project_name"
-            onChange={(event) => setproject_name(event.target.value)}
-          />
-          <button type="submit" className="btn btn-info">
-            Submit
-          </button>
-        </div>
+      <div class="navbar">
+    <img src="logo.png" alt="TaskHub"/>
+    <h2>~~ Welcome User, Start Your Journey !! ~~</h2>
+    <h1>TaskHub</h1>
+  </div>
+            <div class="center-container">
+
+              <div class="input-section">
+                <img style={{"width":"100px"}} src="left.png" alt="Right Image"/>
+                <p class="pdesc" for="projectName">
+                  Streamlining Tasks, 
+                Boosting Efficiency, and 
+                Achieving Goals with Project Management</p><br/>
+                <label class="pname" for="projectName">PROJECT NAME</label><br/>
+                <input style={{"width":"700px"}}type="text"  id="project_name" onChange={(event) => setproject_name(event.target.value)} placeholder="Enter project name"/>
+                  <br/>
+                  <br/>
+                  <button class="b1" type="submit">Submit</button>
+                  <button  class="b2" type="button" onClick={change_page}>View Projects</button>
+              </div>
+                  
+            </div>
       </form>
-      <button type="button" class="btn btn-dark" onClick={change_page}>View Projects</button>
+      
     </>
   );
 }
