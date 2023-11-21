@@ -1,13 +1,13 @@
 import Nav from "../Pages/Nav";
 import '../Components/css/Support.css';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 function Support() {
   const navigate = useNavigate();
-
+  const {id}=useParams();
   const handleBack = () => {
     // Replace '/temp' with the appropriate path
-    navigate('/User-Dashboard/:id');
+    navigate('/User-Dashboard/'+id);
   };
 
   return (
