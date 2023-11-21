@@ -32,7 +32,7 @@ function List_Project(){
 
     const handleBack = () => {
         // Replace '/temp' with the appropriate path
-        navigate('/User-Dashboard/:id');
+        navigate('/User-Dashboard/'+id);
     };
     
     

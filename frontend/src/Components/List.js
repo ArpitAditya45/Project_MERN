@@ -27,7 +27,7 @@ const List = (props) => {
       Axios.get(`http://localhost:4000/project/delete-project/` + id + "/" + value)
       .then((res)=>{
         if(res.status===245){
-          // alert("Project Deleted Successfully");
+          alert("Project Deleted Successfully");
         }else{
           return Promise.reject();
         }

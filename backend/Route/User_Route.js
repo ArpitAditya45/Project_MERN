@@ -1,6 +1,7 @@
 const express = require("express");
 const Route = express.Router();
 const {Project:Project_Schema} = require("../Schema/User");
+const mongoose = require("mongoose");
 
 Route.post("/create/:email", (req, res) => {
   // This is used to create a new user
@@ -58,6 +59,19 @@ Route.get("/get-task/:id",(req,res)=>{
       return err;
     }else{
       res.json(data[0].tasks);
+    }
+  })
+});
+
+Route.get("/user-get/:id",(req,res)=>{
+  // This is used to get the user details
+  Project_Schema.find({_id:mongoose.Types.ObjectId(req.params.id)},(err,data)=>{
+    if(err){
+      console.log("Error in getting Data");
+      return err;
+    }else{
+     return res.json(data);
+      
     }
   })
 })
