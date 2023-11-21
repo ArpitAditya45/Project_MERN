@@ -10,7 +10,7 @@ function AddMember(){
         console.log(email);
 
         const data={id:id,name:name,email:email};
-        Axios.post('http://localhost:4000/project/add-member',data)
+        Axios.post('https://project-management-final.onrender.com/project/add-member',data)
         .then((res)=>{
             if(res.status===245){
                 alert("Member Added Successfully");

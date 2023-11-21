@@ -10,7 +10,7 @@ function Display_Task(props) {
     const [data, setData] = useState([]);
 
     function getTask() {
-        Axios.get(`http://localhost:4000/api/get-task/${props.id}`).then((res) => {
+        Axios.get(`https://project-management-final.onrender.com/api/get-task/${props.id}`).then((res) => {
             if (res.status === 200) {
                 setData(res.data);
                 console.log(res.data);

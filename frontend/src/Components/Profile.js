@@ -17,7 +17,7 @@ function Profile() {
         navigate('/User-Dashboard/'+id);
     }
     function get_data() {
-        Axios.get("http://localhost:4000/api/user-get/"+id)
+        Axios.get("https://project-management-final.onrender.com/api/user-get/"+id)
         .then((res) => {
             if(res.status===200){
                 set_data(res.data);

@@ -7,7 +7,7 @@ function Task(props) {
   const [data, set_data] = useState([]);
   function get_data() {
     Axios.get(
-      `http://localhost:4000/project/task-status/${props.id}/${props.name}`
+      `https://project-management-final.onrender.com/project/task-status/${props.id}/${props.name}`
     ).then((res) => {
       set_data(res.data);
       console.log(res.data);

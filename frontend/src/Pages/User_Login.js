@@ -26,7 +26,7 @@ function User_Login() {
       alert("Please fill all the fields");
       return;
     }
-    Axios.get("http://localhost:4000/api/isValidate/" + email)
+    Axios.get("https://project-management-final.onrender.com/api/isValidate/" + email)
       .then((res) => {
         // Getting data over the server not the best practice.
         if (res.status === 200) {

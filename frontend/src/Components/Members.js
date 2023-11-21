@@ -10,7 +10,7 @@ function Members(props) {
   const [isPopupVisible, setPopupVisible] = useState(false);
 
   function get_data() {
-    Axios.get(`http://localhost:4000/project/get-memeber/${id}/${name}`)
+    Axios.get(`https://project-management-final.onrender.com/project/get-memeber/${id}/${name}`)
       .then((res) => {
         if (res.status === 200) {
           setdata(res.data);
@@ -29,7 +29,7 @@ function Members(props) {
   }, []);
 
   function delete_member(value) {
-    Axios.get(`http://localhost:4000/project/delete-member/${id}/${name}/${value}`)
+    Axios.get(`https://project-management-final.onrender.com/project/delete-member/${id}/${name}/${value}`)
       .then((res) => {
         if (res.status === 200) {
           alert("Member Deleted Successfully");

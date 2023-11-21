@@ -39,7 +39,7 @@ function User_Sign_Up() {
       alert("Please fill all the fields");
       return;
     }
-    Axios.post("http://localhost:4000/api/create/" + email, data)
+    Axios.post("https://project-management-final.onrender.com/api/create/" + email, data)
       .then((res) => {
         if (res.status === 244) {
           alert("Email is already registered");

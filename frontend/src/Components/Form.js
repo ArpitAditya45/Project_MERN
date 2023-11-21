@@ -29,7 +29,7 @@ function Form() {
       id: id,
       project_name: project_name,
     };
-    Axios.post("http://localhost:4000/task/create-project/" + id, data)
+    Axios.post("https://project-management-final.onrender.com/task/create-project/" + id, data)
       .then((res) => {
         if (res.status === 244) {
           alert("Project name is already registered");
@@ -46,7 +46,7 @@ function Form() {
       const data_n={id:id,Project_Name:project_name,Members_Gmail:[]}
     console.log(data_n);
     // navigate(`/project/${value}`);
-    Axios.post(`http://localhost:4000/project/add-project/` + id,data_n)
+    Axios.post(`https://project-management-final.onrender.com/project/add-project/` + id,data_n)
     .then((res)=>{
       if(res.status==200){
          console.log("Project Created Successfully");

@@ -10,7 +10,7 @@ function List_Project(){
     console.log(id);
     const [project_name,setproject_name]=useState([]);
     const get_project=()=>{
-        Axios.get("http://localhost:4000/task/get-project/"+id)
+        Axios.get("https://project-management-final.onrender.com/task/get-project/"+id)
     .then((res)=>{
         if(res.status===200){
             console.log(res.data);

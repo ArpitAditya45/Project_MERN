@@ -12,7 +12,7 @@ const List = (props) => {
   const deletion = (value) => {
     set_flag(true);
     const data = { id: id, project_name: value }; //Creating a object to pass the data
-    Axios.post(`http://localhost:4000/task/delete-project/` + id, data) //Fetch request using Axios
+    Axios.post(`https://project-management-final.onrender.com/task/delete-project/` + id, data) //Fetch request using Axios
       .then((res) => {
         if (res.status === 245) {
           alert("Project Deleted Successfully");
@@ -24,7 +24,7 @@ const List = (props) => {
         alert("An error has occurred");
         console.log(err);
       });
-      Axios.get(`http://localhost:4000/project/delete-project/` + id + "/" + value)
+      Axios.get(`https://project-management-final.onrender.com/project/delete-project/` + id + "/" + value)
       .then((res)=>{
         if(res.status===245){
           alert("Project Deleted Successfully");
